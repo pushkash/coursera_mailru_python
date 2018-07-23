@@ -13,7 +13,7 @@ class File:
         second_content = self.__getContent(second_file.filepath)
         tmp_file_path = os.path.join(tempfile.gettempdir(), "test.txt")
         tmp_file = File(tmp_file_path)
-        
+
         tmp_file.write(first_content + second_content)
 
         return tmp_file
@@ -29,7 +29,7 @@ class File:
             return next(self.iterator)
         except:
             raise StopIteration
-                   
+
     def write(self, content):
         with open(self.filepath, "w") as f:
             f.write(content)
@@ -49,9 +49,9 @@ class File:
 
 # object_2 = File("test_2.txt")
 
-# object_1.write("Hello\nFuck\nSuck")
+# object_1.write("Hello there")
 
-# object_2.write("Huyo moyo")
+# object_2.write("Oh hi, Mark!")
 
 # new_obj = object_1 + object_2
 
